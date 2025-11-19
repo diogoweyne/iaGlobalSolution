@@ -1,75 +1,36 @@
-########################################
-# ARQUIVOS SENSÍVEIS (NÃO PODEM IR PRO GIT)
-########################################
-
-# Variáveis de ambiente
-.env
-*.env
-
-# Banco de dados local
-*.db
-*.sqlite3
-
-########################################
-# AMBIENTE PYTHON
-########################################
-
-# Virtualenv
+# Ambiente virtual
 .venv/
 venv/
 ENV/
 env/
 
-# Cache do Python
+# Arquivos de ambiente
+.env
+*.env
+
+# Cache Python
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
 
-# Builds e pacotes
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-
-########################################
-# CONFIGURAÇÃO DO EDITOR
-########################################
-
-# PyCharm
+# Config do PyCharm
 .idea/
+*.iml
 
-# VSCode
+# Config VSCode
 .vscode/
 
-########################################
-# LOGS / TEMP
-########################################
-
+# Logs
 *.log
-*.tmp
-*.temp
 
-########################################
-# STREAMLIT
-########################################
-
+# Cache Streamlit
 .streamlit/
 
-########################################
-# FASTAPI / UVICORN
-########################################
+# Dados temporários
+*.db
+*.sqlite3
 
-# Arquivos temporários
-*.pid
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

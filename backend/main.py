@@ -1,16 +1,28 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from ia_service import gerar_trilha_ia
 from fastapi.middleware.cors import CORSMiddleware
+from ia_service import gerar_trilha_ia
 
+
+# -----------------------------
+# MODELO DE DADOS RECEBIDOS
+# -----------------------------
 class Perfil(BaseModel):
     nome: str
     area_atual: str
     objetivo_carreira: str
     nivel: str
 
+
+# -----------------------------
+# INICIALIZAÇÃO DO FASTAPI
+# -----------------------------
 app = FastAPI()
 
+
+# -----------------------------
+# CONFIGURAÇÃO DE CORS
+# -----------------------------
 origins = ["*"]
 
 app.add_middleware(
@@ -21,9 +33,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# -----------------------------
+# ROTAS
+# -----------------------------
 @app.get("/")
 def raiz():
     return {"status": "API OzConnect online!"}
+
 
 @app.post("/api/trilhas")
 def criar_trilha(perfil: Perfil):
