@@ -190,7 +190,10 @@ http://127.0.0.1:8000/docs
 # 👨‍💻 Autores
 
 **Diogo Weyne - RM558380**
+
 **Gustavo Tonato - RM555393**
+
 **João Victor de Souza - RM555290**  
 
 FIAP — DISRUPTIVE ARCHITECTURES: IOT, IOB & GENERATIVE IA | OzConnect  
+
